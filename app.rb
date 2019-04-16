@@ -46,7 +46,7 @@ class App < Sinatra::Base
       when "add"
         @operation = "+"
     end
-    [@number1, @number2].inject(@operation)
+    "#{[@number1, @number2].inject(@operation)}"
   end
 
 end
