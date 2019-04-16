@@ -32,4 +32,12 @@ class App < Sinatra::Base
     @number.times.collect {@phrase}
   end
 
+  get '/:operation/:number1/:number2' do 
+    @operation = params[:operation].to_s
+    case @operation 
+    when "divide" 
+    @number1 = params[:number1].to_i
+    @number2 = params[:number2].to_i
+  end 
+
 end
