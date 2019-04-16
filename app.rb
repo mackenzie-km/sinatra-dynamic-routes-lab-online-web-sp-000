@@ -40,12 +40,12 @@ class App < Sinatra::Base
       when "divide"
         @operation = "/"
       when "multiply"
-        @operation = "*" 
+        @operation = "*"
       when "subtract"
         @operation = "-"
       when "add"
-        @operation = "+" 
-    end 
+        @operation = "+"
+    end
     "#{@number1 + @operation + @number2}"
   end
 
