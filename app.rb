@@ -46,8 +46,7 @@ class App < Sinatra::Base
       when "add"
         @operation = "+"
     end
-    binding.pry
-    "#{@number1}" + @operation + "#{@number2}".gsub('""', '')
+    [@number1, @number2].inject(@operation)
   end
 
 end
