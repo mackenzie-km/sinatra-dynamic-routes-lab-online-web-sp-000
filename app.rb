@@ -32,4 +32,21 @@ class App < Sinatra::Base
     @number.times.collect {@phrase}
   end
 
+  get '/:operation/:number1/:number2' do
+    @operation = params[:operation].to_s
+    @number1 = params[:number1].to_i
+    @number2 = params[:number2].to_i
+    case @operation
+      when "divide"
+        @operation = "/"
+      when "multiply"
+        @operation = "*"
+      when "subtract"
+        @operation = "-"
+      when "add"
+        @operation = "+"
+    end
+    "#{[@number1, @number2].inject(@operation)}"
+  end
+
 end
