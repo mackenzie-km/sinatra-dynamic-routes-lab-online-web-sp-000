@@ -46,6 +46,7 @@ class App < Sinatra::Base
       when "add"
         @operation = "+"
     end
+    binding.pry
     "#{@number1 + @operation + @number2}"
   end
 
